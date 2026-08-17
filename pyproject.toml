@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churniq"
+version = "1.0.0"
+description = "End-to-end churn prediction on a 1M-row synthetic telco dataset"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "pyarrow",
+    "scikit-learn>=1.6",
+    "lightgbm>=4.0",
+    "joblib",
+    "matplotlib",
+    "optuna",
+    "fastapi",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx", "jupyter", "seaborn", "streamlit", "anthropic", "tabulate"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

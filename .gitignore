@@ -4,6 +4,18 @@
 # Dataset folder
 data/
 
+# Trained model artifacts (regenerate with `python -m churniq.train`)
+models/
+
+# Local env
+.env
+
+# Local run logs
+train_run.log
+
+# Build artifacts
+*.egg-info/
+
 # Python cache
 __pycache__/
 *.py[cod]

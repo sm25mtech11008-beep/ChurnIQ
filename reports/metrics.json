@@ -1,0 +1,63 @@
+{
+  "trained_at": "2026-08-17T19:06:54+00:00",
+  "n_rows": 1000000,
+  "churn_rate": 0.099227,
+  "cv_compare": {
+    "logistic_baseline": {
+      "cv_auc_mean": 0.6851360366771355,
+      "cv_auc_std": 0.0016631941505875591,
+      "cv_rows": 1000000,
+      "seconds": 72.3
+    },
+    "lightgbm_default": {
+      "cv_auc_mean": 0.6844097224866548,
+      "cv_auc_std": 0.0016344582653357866,
+      "cv_rows": 1000000,
+      "seconds": 375.9
+    }
+  },
+  "optuna_trials": 20,
+  "tuned_cv_auc": 0.6845183732973438,
+  "best_params": {
+    "n_estimators": 200,
+    "learning_rate": 0.025007128480636298,
+    "num_leaves": 33,
+    "min_child_samples": 171,
+    "subsample": 0.7189307137750698,
+    "colsample_bytree": 0.8493617806658427,
+    "reg_alpha": 6.668718659177015,
+    "reg_lambda": 0.0006294064185681299
+  },
+  "holdout_metrics_raw": {
+    "roc_auc": 0.6849365452563493,
+    "pr_auc": 0.2060691543888128,
+    "brier": 0.08518890802017806
+  },
+  "holdout_metrics_calibrated": {
+    "roc_auc": 0.6845640324040273,
+    "pr_auc": 0.2005344538856354,
+    "brier": 0.0851966434254353
+  },
+  "business_threshold": {
+    "threshold": 0.17,
+    "expected_savings": 499663.7802619934,
+    "n_targeted": 20837,
+    "true_churners_caught": 5055
+  },
+  "business_assumptions": {
+    "offer_cost": 50.0,
+    "save_rate": 0.3,
+    "clv_months": 12
+  },
+  "top_gain_features": [
+    "contract_two_year",
+    "customer_satisfaction",
+    "num_complaints",
+    "num_service_calls",
+    "contract_month_to_month",
+    "contract_one_year",
+    "late_payments",
+    "has_tech_support"
+  ],
+  "total_seconds": 1909.5
+}
